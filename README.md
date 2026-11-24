@@ -70,6 +70,24 @@ uv run grounded-rag ask "What is the stock option policy?" --show-context
 uv run grounded-rag search "Can I work remotely?"
 ```
 
+`ask` output (real run, gpt-oss-20b):
+
+```
+Q: How many casual leaves am I entitled to?
+A: You are entitled to **12 casual leaves per calendar year**【1】.
+
+Q: Can I take casual leave during probation?
+A: No. The casual-leave policy applies only to **confirmed employees**【2】, and the probation
+   period is a distinct status for new hires【1】. Therefore, casual leave is not available
+   while you are still on probation.
+
+Q: What is the stock option policy?
+A: I don't know. The indexed documents don't cover this question.     ← no chunk ≥ 0.3, LLM not called
+
+Q: asdf banana rocket
+A: I don't know. The indexed documents don't cover this question.
+```
+
 `search` output:
 
 ```
